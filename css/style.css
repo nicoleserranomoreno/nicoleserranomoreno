@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+:root {
+    --color-white: #fff;
+    --color-green: #4CAF50;
+    --color-gray: #333;
+    --color-pastel-green: #d0f7d4;
+}
+
+body {
+    background-color: var(--color-white);
+    font-family: 'Roboto', serif;
+    font-size: 1.25rem;
+}
+
+
+header {
+    background-color: var(--color-green);
+    text-align: center;
+}
+
+
+video {
+    position: absolute;
+    transform: translate(-50%, -50%) rotate(90deg);
+    overflow: hidden;
+    filter: hue-rotate(90deg) saturate(0.5);
+}
+
+.title {
+    color: var(--color-gray);
+    line-height: 200px;
+
+    font-family: "Paytone One", serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-weight: 400;
+    font-size: 15rem;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    word-spacing: 200px;
+    mix-blend-mode: screen;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+#scrollable section:nth-of-type(even) {
+    background-color: var(--color-pastel-green);
+}
+
+
+.content {
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    width: 70%;
+    border-radius: 15px;
+}
+
+h1, h2, h3 {
+    color: #006400;
+    font-weight: bold;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+a {
+    color: var(--color-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#scrollable {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#scrollable::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    position: relative;
+}
+
+.scroll-to-top {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: var(--color-green);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.scroll-to-top:hover {
+    background-color: #255728;
+}
+
+@media only screen and (max-width: 600px) {
+    .title {
+        color: var(--color-gray);
+        line-height: 150px;
+
+        font-size: 10rem;
+    }
+
+
+    body {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .title {
+        color: var(--color-gray);
+        line-height: 150px;
+
+        font-size: 8rem;
+    }
+
+}
