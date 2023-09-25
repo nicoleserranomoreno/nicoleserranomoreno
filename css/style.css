@@ -75,6 +75,7 @@ section {
     box-sizing: border-box;
     width: 70%;
     border-radius: 15px;
+    word-break: break-word;
 }
 
 h1, h2, h3 {
